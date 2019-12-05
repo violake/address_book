@@ -1,0 +1,11 @@
+version: '3'
+services:
+  address-book:
+    build: .
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./build:/tmp/build
+      - ./scripts:/app/scripts
+      - ./gradle:/app/.gradle'
+    command: "/app/start.sh"
